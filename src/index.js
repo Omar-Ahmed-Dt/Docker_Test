@@ -2,6 +2,7 @@ const express = require('express');
 const res = require('express/lib/response');
 const mongoose = require('mongoose');
 const redis = require('redis');
+const os = require('os');
 
 // init app 
 const PORT = process.env.PORT || 4000;
@@ -37,6 +38,7 @@ mongoose
 
 app.get('/', (req, res) => { 
     redisClient.set('products', 'products...');
+    console.log(`traffic from ${os.hostname}`);
     res.send(`<h1>Hello, it\'s me, How are you Mr.Z3bla!!</h1>`);
 }); 
 
