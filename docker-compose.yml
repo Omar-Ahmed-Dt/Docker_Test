@@ -1,9 +1,9 @@
 version: '3'
 services:
   node-app:
-    container_name: node-app-container
+    container_name: node-app-container    # remove if using nginx as load Balancing 
     image: omar9289/nodejs_app
-    ports:
+    ports:    # remove if using nginx as load Balancing 
         - "4000:4000"
     env_file:
       - ./.env
