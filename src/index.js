@@ -39,7 +39,7 @@ mongoose
 app.get('/', (req, res) => { 
     redisClient.set('products', 'products...');
     console.log(`traffic from ${os.hostname}`);
-    res.send(`<h1>Hello, it\'s me, How are you Mr.Z3bla!!</h1>`);
+    res.send(`<h1>Hello, it\'s me, How are you Mr.Z3bla!! , Using watchtower..</h1>`);
 }); 
 
 app.get('/data', async (req, res) => { 
